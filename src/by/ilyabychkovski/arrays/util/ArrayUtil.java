@@ -6,6 +6,35 @@ public final class ArrayUtil {
         return new int[length];
     }
 
+    /**
+     * Меняет местами максимальный и минимальный элементы в массиве
+     * @param numbers массив чисел
+     */
+    public static void swapMaxAndMin(int[] numbers) {
+
+        int min = numbers[0];
+        int max = numbers[0];
+        int minIndex = 0;
+        int maxIndex = 0;
+
+        for (int i = 0; i < numbers.length; i++) {
+
+            if (numbers[i] < min) {
+                min = numbers[i];
+                minIndex = i;
+            }
+
+            if (numbers[i] > max) {
+                max = numbers[i];
+                maxIndex = i;
+            }
+        }
+
+        int tmp = numbers[maxIndex];
+        numbers[maxIndex] = numbers[minIndex];
+        numbers[minIndex] = tmp;
+    }
+
     public static int countZeroNumbers(int[] numbers) {
 
         int amount = 0;

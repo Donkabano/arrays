@@ -18,6 +18,9 @@ public class Main {
             array[i] = console.getInt();
         }
         ConsolePrinter.printArray(array);
+        ArrayUtil.swapMaxAndMin(array);
+        ConsolePrinter.printArray(array);
+
         console.close();
     }
 
